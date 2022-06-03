@@ -12,12 +12,16 @@
     margin: 0 auto;
 }
 
+body {
+    background-color: #0a648b;
+}
+
 
 /* search-section */
 
 .search-section {
     background-color: #0a648b;
-    padding: 20px 0;
+    padding: 25px 0;
     text-align: center;
     display: flex;
     justify-content: center;
