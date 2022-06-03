@@ -1,0 +1,53 @@
+/* import google font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* search-section */
+
+.search-section {
+    background-color: #0a648b;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.search-area {
+    display: flex;
+    width: 50%;
+}
+
+.search-area input {
+    flex-grow: 16;
+    padding: 12px 20px;
+    font-size: 18px;
+}
+
+.search-area button {
+    flex-grow: 2;
+    font-size: 18px;
+    background-color: #e9c010;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.search-area button:hover {
+    background-color: #ed9c08;
+}
+
+.search-area button .btn {}
+
+.search-area button .btn i {}
