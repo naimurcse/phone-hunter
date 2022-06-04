@@ -210,3 +210,121 @@ body {
     margin: 3px;
     font-size: 14px;
 }
+
+
+/* Media Query */
+
+
+/* @media (mix-width: 1200px) {
+    body {
+        background-color: rgb(229, 255, 0);
+    }
+    .container {
+        width: 90%;
+    }
+    .search-area {
+        display: flex;
+        width: 60%;
+    }
+    .product-content {
+        display: flex;
+        flex-flow: column;
+        margin: 10px 24px;
+    }
+    #product-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin: 0 24px;
+    }
+    #product-info {
+        padding: 0 30px 40px 30px;
+    }
+    .search-area input {
+        flex-grow: 8;
+    }
+} */
+
+@media (max-width: 1200px) {
+    body {
+        /* background-color: red; */
+    }
+    .container {
+        width: 90%;
+    }
+    .search-area {
+        display: flex;
+        width: 60%;
+    }
+    .product-content {
+        display: flex;
+        flex-flow: column;
+        margin: 10px 24px;
+    }
+    #product-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin: 0 24px;
+    }
+    #product-info {
+        padding: 0 30px 40px 30px;
+    }
+    .search-area input {
+        flex-grow: 8;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 100%;
+    }
+    .search-area {
+        display: flex;
+        width: 80%;
+    }
+    .product-content {
+        display: flex;
+        flex-flow: column;
+        margin: 10px 24px;
+    }
+    #product-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin: 0 24px;
+    }
+    #product-info {
+        padding: 0 30px 40px 30px;
+    }
+    .search-area input {
+        flex-grow: 8;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    .search-area {
+        display: flex;
+        width: 80%;
+    }
+    .product-content {
+        display: flex;
+        flex-flow: column;
+        margin: 10px 24px;
+    }
+    #product-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 0 24px;
+    }
+    #product-info {
+        padding: 0 30px 40px 30px;
+    }
+    .search-area input {
+        flex-grow: 4;
+    }
+}
