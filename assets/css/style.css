@@ -1,4 +1,9 @@
+/* Google Font Import */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap");
+
+/* Utilities Style */
+
 * {
     margin: 0px;
     padding: 0px;
@@ -14,6 +19,9 @@ body {
     background-color: rgb(10, 100, 139);
     font-family: Poppins, sans-serif;
 }
+
+
+/* Search Section */
 
 .search-section {
     background-color: rgb(10, 100, 139);
@@ -48,9 +56,8 @@ body {
     background-color: rgb(237, 156, 8);
 }
 
-.search-area button .btn {}
 
-.search-area button .btn i {}
+/* Product Container */
 
 .product-container {
     padding: 50px 0px;
@@ -83,15 +90,11 @@ body {
     z-index: -1;
 }
 
-.product-card h2 {}
-
 .product-card h3 {
     font-size: 32px;
     margin-top: 15px;
     color: rgb(10, 100, 139);
 }
-
-.product-card h4 {}
 
 .product-card h5 {
     font-size: 18px;
@@ -103,16 +106,10 @@ body {
     z-index: 3;
 }
 
-.product-card h6 {}
-
 .product-card img {
     z-index: 2;
     max-width: 100%;
 }
-
-.product-card p {}
-
-.product-card span {}
 
 .product-card button {
     font-size: 18px;
@@ -135,8 +132,6 @@ body {
 .product-card button:hover {
     background-color: rgb(237, 156, 8);
 }
-
-.product-details {}
 
 .product-content {
     display: flex;
@@ -175,8 +170,6 @@ body {
     color: rgb(6, 38, 52);
 }
 
-#product-info ul {}
-
 #product-info ul li {
     list-style: none;
     line-height: 1.8;
@@ -214,41 +207,7 @@ body {
 
 /* Media Query */
 
-
-/* @media (mix-width: 1200px) {
-    body {
-        background-color: rgb(229, 255, 0);
-    }
-    .container {
-        width: 90%;
-    }
-    .search-area {
-        display: flex;
-        width: 60%;
-    }
-    .product-content {
-        display: flex;
-        flex-flow: column;
-        margin: 10px 24px;
-    }
-    #product-cards {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-        margin: 0 24px;
-    }
-    #product-info {
-        padding: 0 30px 40px 30px;
-    }
-    .search-area input {
-        flex-grow: 8;
-    }
-} */
-
 @media (max-width: 1200px) {
-    body {
-        /* background-color: red; */
-    }
     .container {
         width: 90%;
     }

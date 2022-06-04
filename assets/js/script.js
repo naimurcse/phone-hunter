@@ -3,7 +3,6 @@ const loadData = () => {
     const searchField = document.getElementById("search-field");
     let searchProduct = searchField.value;
     searchProduct = searchProduct.toLowerCase();
-    // console.log(searchProduct);
     const errorDisplay = document.getElementById("error-display");
     if (searchProduct == '') {
         document.getElementById("product-details").innerHTML = '';
@@ -78,15 +77,12 @@ const displayProductDetails = product => {
 
 // Load Product Features
 const loadProductFeatures = async productId => {
-    // console.log(productId);
 
     const url = `https://openapi.programming-hero.com/api/phone/${productId}`
     const res = await fetch(url);
     const data = await res.json();
-    // console.log(data.data);
 
     const { storage, displaySize, chipSet, memory, sensors } = data.data.mainFeatures;
-    // console.log(sensors);
 
     const productInfo = document.getElementById("product-info");
     const ul = document.createElement("ul");
@@ -104,11 +100,9 @@ const loadProductFeatures = async productId => {
         const sensor = document.createElement("li");
         sensor.classList.add("sensor-style")
         sensor.innerText = `${x}`
-            // console.log(sensor.innerHTML);
         sensorsList.appendChild(sensor);
     }
 
-    console.log(data.data.others);
     const othersHeading = document.createElement("h4");
     othersHeading.innerText = "Others Features";
     const otherFeatures = document.createElement("ul");
@@ -117,7 +111,6 @@ const loadProductFeatures = async productId => {
         const otherFeature = document.createElement("li");
         otherFeature.classList.add("sensor-style")
         otherFeature.innerText = `${other}`
-            // console.log(sensor.innerHTML);
         otherFeatures.appendChild(otherFeature);
     }
     productInfo.appendChild(ul);
