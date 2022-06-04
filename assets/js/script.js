@@ -2,19 +2,35 @@ const loadData = () => {
     const searchField = document.getElementById("search-field");
     const searchProduct = searchField.value;
     console.log(searchProduct);
+    const errorDisplay = document.getElementById("error-display");
+    if (searchProduct == '') {
+        document.getElementById("product-details").innerHTML = '';
+        document.getElementById("product-cards").innerHTML = '';
+        document.querySelector("#error-display h2").innerText = "Write Something to Display"
+        errorDisplay.style.display = "block";
+    } else {
+        errorDisplay.style.display = "none";
+        const url = `https://openapi.programming-hero.com/api/phones?search=${searchProduct}`;
 
-    const url = `https://openapi.programming-hero.com/api/phones?search=${searchProduct}`;
+        fetch(url)
+            .then(res => res.json())
+            .then(data => displayProducts(data.data))
 
-    fetch(url)
-        .then(res => res.json())
-        .then(data => displayProducts(data.data))
-
+    }
     searchField.value = "";
 }
 
 const displayProducts = products => {
     let productCards = document.getElementById("product-cards");
     document.getElementById("product-cards").innerHTML = '';
+
+    if (products.length == 0) {
+        document.getElementById("product-details").innerHTML = '';
+        document.getElementById("product-cards").innerHTML = '';
+        document.querySelector("#error-display h2").innerText = "The Product Not Found!"
+        document.getElementById("error-display").style.display = "block";
+    }
+
     products.forEach(product => {
         const productCard = document.createElement("div");
         productCard.classList.add("product-card");
