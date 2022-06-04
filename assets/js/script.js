@@ -14,6 +14,7 @@ const loadData = () => {
 
 const displayProducts = products => {
     let productCards = document.getElementById("product-cards");
+    document.getElementById("product-cards").innerHTML = '';
     products.forEach(product => {
         const productCard = document.createElement("div");
         productCard.classList.add("product-card");
@@ -35,16 +36,8 @@ const loadProductDetails = async productId => {
 }
 
 const displayProductDetails = product => {
-    // console.log(product);
-    // console.log(product.brand);
-    // console.log(product.image);
-    console.log(product.mainFeatures);
-    // console.log(product.sensors);
-    // console.log(product.others);
-    // console.log(product.storage);
-    // console.log(product.name);
-    // console.log(product.releaseDate);
     const productDetails = document.getElementById("product-details");
+    document.getElementById("product-details").innerHTML = '';
     const productContent = document.createElement("div");
     productContent.classList.add("product-content");
     productContent.innerHTML = `
@@ -55,7 +48,7 @@ const displayProductDetails = product => {
     <h2>${product.name}</h2>
     <p>${product.brand}</p>
     <p>${product.releaseDate}</p>
-    <h2>Features</h2>
+    <h4>Features</h4>
     </div>
     `
     productDetails.appendChild(productContent);
