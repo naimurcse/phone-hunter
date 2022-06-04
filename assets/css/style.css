@@ -146,8 +146,6 @@ body {
     align-items: center;
 }
 
-.product-img img {}
-
 #product-info {
     flex-grow: 1;
     padding: 30px;
