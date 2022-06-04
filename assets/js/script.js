@@ -13,23 +13,27 @@ const loadData = () => {
 }
 
 const displayProducts = products => {
-    // console.log(products);
     let productCards = document.getElementById("product-cards");
     products.forEach(product => {
-        console.log(product);
-        console.log(product.brand);
-        console.log(product.phone_name);
-        console.log(product.image);
-        console.log(product.slug);
         const productCard = document.createElement("div");
         productCard.classList.add("product-card");
         productCard.innerHTML = `
             <img src="${product.image}" alt="" />
             <h3>${product.phone_name}</h3>
-            <h5>${product.brand}</h5>
-            <button>Explore</button>
+            <h5>Brand : ${product.brand}</h5>
+            <button onclick="loadProductDetails('${product.slug}')">Explore</button>
         `
-
         productCards.appendChild(productCard);
     });
+}
+
+const loadProductDetails = async productId => {
+    url = `https://openapi.programming-hero.com/api/phone/${productId}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    console.log(data.data);
+}
+
+const displayProductDetails = product => {
+
 }
